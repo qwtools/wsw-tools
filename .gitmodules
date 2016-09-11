@@ -1,0 +1,6 @@
+[submodule "wsw-scripts"]
+	path = wsw-scripts
+	url = git@github.com:qwtools/wsw-scripts.git
+[submodule "wsw-web"]
+	path = wsw-web
+	url = git@github.com:qwtools/wsw-web.git

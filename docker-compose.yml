@@ -1,0 +1,23 @@
+version: '2'
+services:
+  scripts:
+    build: wsw-scripts
+    environment:
+      - TOKEN
+      - PTY_PORT=8007
+      - PRC_PORT=1337
+      - HOST=scripts
+    expose:
+      - "8007"
+      - "1337"
+  web:
+    build: wsw-web
+    environment:
+     - PORT=3000
+     - WSW_SCRIPTS_HOST=scripts
+     - WSW_SCRIPTS_RPC_PORT=1337
+     - WSW_SCRIPTS_PTY_PORT=8007
+    ports:
+      - "3000:3000"
+    links:
+      - scripts
