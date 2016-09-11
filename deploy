@@ -1,0 +1,6 @@
+#!/bin/sh
+
+docker-machine rm -f wsw-tools
+docker-machine create --driver digitalocean --digitalocean-access-token $TOKEN --digitalocean-region fra1 wsw-tools
+eval $(docker-machine env wsw-tools --shell sh)
+docker-compose up -d
