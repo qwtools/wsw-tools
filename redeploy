@@ -1,0 +1,12 @@
+#!/bin/sh
+
+docker-machine rm -f wsw-tools
+docker-machine create \
+  --driver=generic \
+  --generic-ip-address=46.101.115.115 \
+  --generic-ssh-user=root \
+  --generic-ssh-port=22 \
+      wsw-tools
+
+eval $(docker-machine env wsw-tools --shell sh)
+docker-compose up -d

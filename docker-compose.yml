@@ -21,3 +21,11 @@ services:
       - "80:80"
     links:
       - scripts
+  bot:
+    build: wsw-bot
+    environment:
+     - TELEGRAM_TOKEN
+     - WSW_SCRIPTS_HOST=scripts
+     - WSW_SCRIPTS_RPC_PORT=1337
+    links:
+      - scripts

@@ -13,11 +13,15 @@ alias game-start='curl http://warsow.online/start'
 alias game-stop='curl http://warsow.online/stop'
 ```
 
+### Telegram bot
+[telegram.me/warsow_bot](https://telegram.me/warsow_bot)
+
 ### Deploy to DigitalOcean
 * Get an [API Token]( https://cloud.digitalocean.com/settings/api/tokens)
-* Export TOKEN environment variable
+* Export all token environment variables
 ```bash
-export TOKEN=<your token>
+export TOKEN=<your digitalocean token>
+export TELEGRAM_TOKEN=<your telegram bot token>
 ```
 * Run deploy script
 ```bash
