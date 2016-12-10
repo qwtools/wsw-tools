@@ -4,3 +4,6 @@
 [submodule "wsw-web"]
 	path = wsw-web
 	url = git@github.com:qwtools/wsw-web.git
+[submodule "wsw-bot"]
+	path = wsw-bot
+	url = git@github.com:qwtools/wsw-bot.git
